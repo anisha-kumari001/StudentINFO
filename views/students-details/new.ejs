@@ -1,0 +1,82 @@
+<% layout("/layouts/boilerplate") %>
+   
+    <div class="row mt-3">
+      <div class="col-8 offset-2">
+        <br><br>
+    <h3>Add new Student</h3>
+    
+    <form method="POST" action="/students-details" novalidate class="needs-validation" >
+      <div class="mb-3">
+
+      <label for="name"  class="form-label">Name</label>
+      <input name="student[name]" type="text" placeholder="Add name" class="form-control" required />
+      <div class="invalid-feedback">Must add name</div>
+    </div>
+     <div class="mb-3">
+      <label for="rollid" class="form-label" >ROLLID</label>
+      <input name="student[rollid]" type="text" placeholder="Add RollID" class="form-control" required />
+      <div class="invalid-feedback">Enter valid RollID</div>
+    </div>
+      <div class="mb-3">
+        <label for="image" class="form-label" >Image URL</label>
+        <input
+        name="student[image]"
+        class="form-control"
+        
+        type="text"
+        placeholder="Enter  image link"
+      />
+     
+      </div>
+      
+      <div class="row">
+        <div class="mb-3 col-lg-4 col-md-4">
+          <label for="sem" class="form-label" >Semester</label>
+          <input name="student[sem]"  class="form-control" required />
+          <div class="invalid-feedback">Enter semester</div>
+        </div>
+        
+        <div class="mb-3 col-lg-8 col-md-8">
+          <label for="cg"  class="form-label" >CG</label>
+          <input name="student[cg]"  type="text" class="form-control" required  />
+          <div class="invalid-feedback">Enter cg</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-lg-2 col-md-2">
+          <label for="" class="form-label" >IWT</label>
+          <input name="student[courses.IWT]" type="number"  class="form-control" required />
+          <div class="invalid-feedback">Enter marks</div>
+        </div>
+        
+        <div class="mb-3 col-lg-2 col-md-2">
+          <label for=""  class="form-label" >OS</label>
+          <input name="student[courses.OS]"  type="number" class="form-control" required  />
+          <div class="invalid-feedback">Enter marks</div></div>
+     
+      <div class="mb-3 col-lg-3 col-md-3">
+        <label for=""  class="form-label" >DBMS</label>
+        <input name="student[courses.DBMS]"  type="number" class="form-control" required  />
+        <div class="invalid-feedback">Enter marks</div></div>
+   
+    <div class="mb-3 col-lg-3 col-md-3">
+      <label for=""  class="form-label" >ML</label>
+      <input name="student[courses.ML]"  type="number" class="form-control" required  />
+      <div class="invalid-feedback">Enter marks</div></div>
+  </div>
+     
+      <br><br>
+     
+     
+
+      
+     
+      <button class="btn btn-dark add-btn mt-3">Add</button>
+      <br><br>
+    </form>
+  
+</div>
+
+</div>
+
+  

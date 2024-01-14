@@ -1,0 +1,30 @@
+<% layout("/layouts/boilerplate") %>
+  
+    <h3>All Students Detail</h3>
+    <!-- <form method="GET" action="/listings/new">
+      <button>Create New Listing</button>
+    </form> --> 
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+      <% for(let student of allstudents) { %>
+        <a href="/students-details/<%=student._id%>" class="list-link">
+        <div class="card cards col mb-5" >
+          <img 
+          src="<%=student.image %>" class="card-img-top" alt="student_image" 
+          style="height: 20rem;"/>
+          
+          <div class="card-body">
+            <p class="card-text"><b><%=student.name %> </b><br>
+               <%= student.rollid%> 
+            <br></p>
+          </div>
+        </div>
+
+        </a>
+        
+        <% } %>
+    </div>
+   
+
+   
+  

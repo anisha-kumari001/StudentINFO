@@ -1,0 +1,113 @@
+<% layout("/layouts/boilerplate") %>
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+
+    <h3>Add Student Subjects</h3>
+    <form method="POST" action="/students-details/<%= student._id %>?_method=PUT"  novalidate class="needs-validation">
+      <div class="mb-3">
+
+    <label for="name"  class="form-label">Name</label>
+    <input name="student[name]" value="<%= student.name %>" type="text" class="form-control" required />
+    </div>
+
+     
+     <div class="mb-3">
+      <label for="rollid" class="form-label" >ROLLID</label>
+    
+      <input name="student[rollid]" value="<%= student.rollid %>" type="text" class="form-control" required />
+     
+      </div>
+       
+      
+      <div class="mb-3">
+      <label for="image" class="form-label" >Image URL</label>
+      <input name="student[image]" value="<%= student.image %>" type="text" class="form-control" required/>
+      <div class="invalid-feedback">Enter image URL/link</div>
+      </div>
+      
+     <div class="row">
+      <div class="mb-3 col-lg-4 col-md-4">
+        <label for="cg" class="form-label" >CG</label>
+      <input name="student[cg]" value="<%= student.cg %>" type="text" class="form-control" required/><div class="invalid-feedback">Enter cg</div>
+      </div>
+
+
+      <div class="mb-3 col-lg-8 col-md-8">
+        <label for="sem" class="form-label" >Semester</label>
+      <input
+        name="student[sem]"
+        value="<%= student.sem %>"
+        type="text"
+        class="form-control"
+        required
+      /><div class="invalid-feedback">Enter semester</div>
+      </div>
+     </div>
+
+     <div class="row">
+     
+      <div class="mb-3 col-lg-3 col-md-3">
+        <label for="" class="form-label" >Marks in IWT</label>
+      <input
+        name="student[courses.IWT]"
+        value="<%= student.courses.IWT %>"
+        type="text"
+        class="form-control"
+        required
+      /><div class="invalid-feedback">Enter MARKS</div>
+      </div>
+
+      
+
+      
+
+      <div class="mb-3 col-lg-3 col-md-3">
+        <label for="" class="form-label" >Marks in OS</label>
+          
+          
+          <input
+            name="student[courses.OS]"
+            value="<%= student.courses.OS %>"
+            type="text"
+            class="form-control"
+            required
+          /><div class="invalid-feedback">Enter MARKS</div>
+        </div>
+         
+          <div class="mb-3 col-lg-3 col-md-3">
+            <label for="" class="form-label" >Marks in DBMS</label>
+                 
+      <input
+        name="student[courses.DBMS]"
+        value="<%= student.courses.DBMS %>"
+        type="text"
+        class="form-control"
+        required
+      /><div class="invalid-feedback">Enter MARKS</div>
+      </div>
+
+      <div class="mb-3 col-lg-3 col-md-3">
+        <label for="" class="form-label" >Marks in ML</label>
+             
+  <input
+    name="student[courses.ML]"
+    value="<%= student.courses.ML %>"
+    type="text"
+    class="form-control"
+    required
+  /><div class="invalid-feedback">Enter MARKS</div>
+  </div>
+     </div>
+     </div>
+     
+      
+
+      
+      
+     
+      <button class="btn btn-dark edit-btn mt-3 col-2 offset-2">Update</button>
+    </form>
+  </div>
+
+</div>
+  
